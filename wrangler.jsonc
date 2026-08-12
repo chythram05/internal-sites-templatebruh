@@ -1,0 +1,36 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "internal-sites-templatebruh",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-10-08",
+	"compatibility_flags": ["nodejs_compat"],
+	"workers_dev": true,
+	"placement": {
+		"mode": "smart"
+	},
+	"observability": {
+		"enabled": true
+	},
+	"dispatch_namespaces": [
+		{
+			"binding": "dispatcher",
+			"namespace": "internal-sites",
+			"remote": true
+		}
+	],
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "internal-sites-platform",
+			"database_id": "e1d58bf6-d93a-48cd-bd9c-065db12d57e1"
+		}
+	],
+	"vars": {
+		"DISPATCH_NAMESPACE_NAME": "internal-sites",
+		"SITE_DOMAIN": "internal-company.com",
+		"DEPLOY_PATH": "/deploy",
+		"ACCOUNT_ID": "1e69689b87e13adbc6846c096ff8d7af",
+		"ACCESS_TEAM_DOMAIN": "shrill-sun-b158.cloudflareaccess.com"
+	},
+	"upload_source_maps": true
+}
